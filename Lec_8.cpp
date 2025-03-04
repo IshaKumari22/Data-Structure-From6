@@ -187,47 +187,47 @@
 // }
 
 
-// HW 2 WAF to swap the max and min number of an array
+HW 2 WAF to swap the max and min number of an array
 
-// #include<iostream>
-// using namespace std;
-// void maxmin(int arr[],int n){
-//     int minimum=0;
-//     int maximum=0;
-//     for(int i=1;i<n;i++)
-//     {
-//         if(arr[minimum]>arr[i]){
-//             minimum=i;
-//         }
-//           if (arr[i] > arr[maximum]) {
-//             maximum = i;
-//         }
-//     }
-//     cout<<"\nMinimum : "<<arr[minimum]<<endl;
-//     cout<<"\nMaximum : "<<arr[maximum]<<endl;
+#include<iostream>
+using namespace std;
+void maxmin(int arr[],int n){
+    int minimum=0;
+    int maximum=0;
+    for(int i=1;i<n;i++)
+    {
+        if(arr[minimum]>arr[i]){
+            minimum=i;
+        }
+          if (arr[i] > arr[maximum]) {
+            maximum = i;
+        }
+    }
+    cout<<"\nMinimum : "<<arr[minimum]<<endl;
+    cout<<"\nMaximum : "<<arr[maximum]<<endl;
 
 
-//     int temp=arr[minimum];
-//     arr[minimum]=arr[maximum];
-//     arr[maximum]=temp;
+    int temp=arr[minimum];
+    arr[minimum]=arr[maximum];
+    arr[maximum]=temp;
 
-//    cout<<"\nAfter swapping array :";
-//    for(int i=0;i<n;i++){
-//     cout<<arr[i]<<" ";
-//    }
+   cout<<"\nAfter swapping array :";
+   for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+   }
 
-//  cout<<endl;
-// }
+ cout<<endl;
+}
 
-// int main(){
-//     int arr[]={4,6,2,9,1};
-//     int n=5;
-//      cout<<"\nBefore swapping array :";
-//     for(int i=0;i<n;i++){
-//     cout <<arr[i]<<" ";
-//     }
-//     maxmin(arr,n);
-// }
+int main(){
+    int arr[]={4,6,2,9,1};
+    int n=5;
+     cout<<"\nBefore swapping array :";
+    for(int i=0;i<n;i++){
+    cout <<arr[i]<<" ";
+    }
+    maxmin(arr,n);
+}
 
 
 
