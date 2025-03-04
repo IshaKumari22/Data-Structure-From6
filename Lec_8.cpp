@@ -187,49 +187,101 @@
 // }
 
 
-HW 2 WAF to swap the max and min number of an array
+// HW 2 WAF to swap the max and min number of an array
 
-#include<iostream>
-using namespace std;
-void maxmin(int arr[],int n){
-    int minimum=0;
-    int maximum=0;
-    for(int i=1;i<n;i++)
-    {
-        if(arr[minimum]>arr[i]){
-            minimum=i;
-        }
-          if (arr[i] > arr[maximum]) {
-            maximum = i;
-        }
-    }
-    cout<<"\nMinimum : "<<arr[minimum]<<endl;
-    cout<<"\nMaximum : "<<arr[maximum]<<endl;
+// #include<iostream>
+// using namespace std;
+// void maxmin(int arr[],int n){
+//     int minimum=0;
+//     int maximum=0;
+//     for(int i=1;i<n;i++)
+//     {
+//         if(arr[minimum]>arr[i]){
+//             minimum=i;
+//         }
+//           if (arr[i] > arr[maximum]) {
+//             maximum = i;
+//         }
+//     }
+//     cout<<"\nMinimum : "<<arr[minimum]<<endl;
+//     cout<<"\nMaximum : "<<arr[maximum]<<endl;
 
 
-    int temp=arr[minimum];
-    arr[minimum]=arr[maximum];
-    arr[maximum]=temp;
+//     int temp=arr[minimum];
+//     arr[minimum]=arr[maximum];
+//     arr[maximum]=temp;
 
-   cout<<"\nAfter swapping array :";
-   for(int i=0;i<n;i++){
-    cout<<arr[i]<<" ";
-   }
+//    cout<<"\nAfter swapping array :";
+//    for(int i=0;i<n;i++){
+//     cout<<arr[i]<<" ";
+//    }
 
- cout<<endl;
-}
+//  cout<<endl;
+// }
 
-int main(){
-    int arr[]={4,6,2,9,1};
-    int n=5;
-     cout<<"\nBefore swapping array :";
-    for(int i=0;i<n;i++){
-    cout <<arr[i]<<" ";
-    }
-    maxmin(arr,n);
-}
+// int main(){
+//     int arr[]={4,6,2,9,1};
+//     int n=5;
+//      cout<<"\nBefore swapping array :";
+//     for(int i=0;i<n;i++){
+//     cout <<arr[i]<<" ";
+//     }
+//     maxmin(arr,n);
+// }
 
 
 
 // HW 3 WAF to print all the unique values
 
+// #include<iostream>
+// using namespace std;
+// void  unique(int arr[],int n){
+//     for(int i=0;i<n;i++){
+//     bool isUnique=true;
+//         for(int j=0;j<n;j++){
+//             if(i!=j && arr[i]==arr[j]){
+//                  isUnique=false;
+//                  break;
+//             }
+//         }
+//             if(isUnique){
+//                 cout<<arr[i]<<" ";
+//             }
+//         }
+//        cout<<endl;
+        
+// }
+
+// int main(){
+//     int arr[]={1,2,3,1,2,3,4};
+//     int n=7;
+//     unique(arr,n);
+// }
+
+
+// hw 4  WAF to print intersection of 2 arrays
+
+#include<iostream>
+using namespace std;
+void intersection(int arr1[],int arr2[],int n){
+    bool isFirst=true;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(arr1[i]==arr2[j]){
+                if(!isFirst){
+
+                cout  << ","  ;
+                }
+                cout<<arr2[j];
+                isFirst=false;
+                break;
+            }
+        }
+    }
+}
+int main(){
+    int arr1[]={1,2,3,4,5};
+    int arr2[]={6,7,3,1,8};
+    int n=5;
+    intersection(arr1,arr2,n);
+}
