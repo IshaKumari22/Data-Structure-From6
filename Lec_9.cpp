@@ -143,21 +143,45 @@
 
 //STATIC VS DYNAMIC MEMORY ALLOCATION
 
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//       vector<int>vec;
+//       vec.push_back(0);
+//       vec.push_back(1);
+//       vec.push_back(2);
+//       vec.push_back(3);
+//       vec.push_back(4);
+
+//       cout<<vec.size()<<endl;
+//       cout<<vec.capacity()<<endl;
+
+//       return 0;
+
+// }
+
+
+
+// Single number
 #include<iostream>
 #include<vector>
 using namespace std;
 
+class solution{
+      public:
+      int singleNumber(vector<int>&nums){
+            int ans=0;
+            for(int val:nums){
+                  ans=ans^val;
+            }
+         return ans;
+      }
+};
 int main(){
-      vector<int>vec;
-      vec.push_back(0);
-      vec.push_back(1);
-      vec.push_back(2);
-      vec.push_back(3);
-      vec.push_back(4);
-
-      cout<<vec.size()<<endl;
-      cout<<vec.capacity()<<endl;
-
-      return 0;
-
+    vector<int> nums = {4, 1, 2, 1, 2}; // Example input
+    solution sol;
+    cout << "Single number: " << sol.singleNumber(nums) << endl;
+    return 0;
 }
